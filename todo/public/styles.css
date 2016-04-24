@@ -99,75 +99,23 @@ ul {
 	border-radius: 3px;
 }
 
-
 /*animations*/
-
-.example-enter {
-	opacity: 0;
-	transform: translateX(-250px);
+.toggle-enter {
+	max-height: 0;
+	overflow: hidden;
 }
-.example-enter.example-enter-active {
-	opacity: 1;
-	transform: translateX(0);
-	transition: 0.3s;
+.toggle-enter.toggle-enter-active {
+	max-height: 300px;
+	overflow: hidden;
+	transition: max-height .25s ease-in;
 }
-.example-leave {
-	opacity: 1;
-	transform: translateX(0);
+.toggle-leave {
+	max-height: 300px;
+	overflow: hidden;
 }
-.example-leave.example-leave-active {
-	opacity: 0;
-	transform: translateX(250px);
-	transition: 0.3s;
+.toggle-leave.toggle-leave-active {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .25s ease-out;
 }
-.example-appear {
-	opacity: 0;
-	transform: translateX(-250px);
-}
-
-/*npm install --save react-dnd@2.x.x react-dnd-html5-backend@1.x.x*/
-.example-appear.example-appear-active {
-	opacity: 1;
-	transform: translateX(0);
-	transition: .5s;
-}
-
-
-/*drag and drop*/
-body {
-	font: 16px/1 sans-serif;
-}
-#root {
-	height: 100%;
-}
-h1 {
-	font-weight: 200;
-	color: #3b414c;
-	font-size: 20px;
-}
-.app {
-	white-space: nowrap;
-	height: 100%;
-}
-.snack {
-	display: inline-block;
-	padding: .5em;
-	margin: 0 1em 1em 0.25em;
-	border: 4px solid #d9d9d9;
-	background: #f7f7f7;
-	height: 5rem;
-	width: 5rem;
-	border-radius: 5rem;
-	cursor: pointer;
-	line-height: 5em;
-	text-align: center;
-	color: #333;
-}
-.shopping-cart {
-	border: 5px dashed #d9d9d9;
-	border-radius: 10px;
-	padding: 5rem 2rem;
-	text-align: center;
-}
-
 
